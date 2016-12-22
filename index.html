@@ -22,30 +22,6 @@
 
 <body leftmargin=0 topmargin=0  bgcolor="#000000" >
 
-    <script type="text/javascript">
-        function checkOnline(url, error, ok) {
-        try {
-            var scriptElem = document.createElement('script');
-            scriptElem.type = 'text/javascript';
-            scriptElem.onerror = function(){error();};
-            scriptElem.onload = function(){ok();};
-            scriptElem.src = url;
-            document.getElementsByTagName("body")[0].appendChild(scriptElem);
-        } catch(err) {
-            error(err);
-        }
-    };
-    checkOnline('http://52.67.215.83:8080/opportunityee/oportunidades/#/login', function() {
-        var $wrapper = document.querySelector('.sistema'),
-        HTMLTemporario = $wrapper.innerHTML,
-        HTMLNovo = '</br></br>Descuple nosso servidor esta fora do ar, contate o suporte! </br></br>';
-     
-        HTMLTemporario = HTMLNovo + HTMLTemporario;
-         
-        $wrapper.innerHTML = HTMLTemporario;
-    }, function(){});
-    </script>
-
     <div class="sistema" >
         
 
